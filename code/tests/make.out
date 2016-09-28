@@ -1,0 +1,154 @@
+setup object directory for dev board
+mkdir obj_redbee-econotag_board
+ln -sf ../../board/redbee-econotag.h obj_redbee-econotag_board/board.h
+git submodule update
+You need to run this command from the toplevel of the working tree.
+make: [all] Error 1 (ignored)
+for target in blink-red blink-green blink-blue blink-white blink-allio uart1-loopback tmr tmr-ints sleep spi printf ; do make $target\_redbee-econotag.bin; done
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-ar cru obj_redbee-econotag_board/board.a
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/blink-red.o blink-red.c
+arm-linux-gcc -E -Wa,-gstabs -D__ASSEMBLY__ -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -o ../src/start.s ../src/start.S
+arm-linux-gcc -Wa,-gstabs -D__ASSEMBLY__ -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -c -o ../src/start.o ../src/start.s
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I.  -MMD ../src/isr.c -c -o ../src/isr.o
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o ../src/default_lowlevel.o ../src/default_lowlevel.c
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o ../lib/gpio.o ../lib/gpio.c
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o ../lib/maca.o ../lib/maca.c
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o ../lib/nvm.o ../lib/nvm.c
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o ../lib/printf.o ../lib/printf.c
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o ../lib/uart1.o ../lib/uart1.c
+arm-linux-ar rcs ../lib/libmc1322x.a ../lib/gpio.o ../lib/maca.o ../lib/nvm.o ../lib/printf.o ../lib/uart1.o
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/tests.o tests.c
+arm-linux-ar cru obj_redbee-econotag_board/board.a obj_redbee-econotag_board/tests.o
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/put.o put.c
+arm-linux-ar cru obj_redbee-econotag_board/board.a obj_redbee-econotag_board/put.o
+arm-linux-ar cru ../src/src.a ../src/default_lowlevel.o
+arm-linux-ar cru ../src/src.a ../src/isr.o
+arm-linux-ar cru ../src/src.a ../src/start.o
+arm-linux-gcc -T ../mc1322x.lds -nostartfiles -static -Wl,-Map=blink-red_redbee-econotag.map -export-dynamic  \
+	-L ../lib -L ../src -L obj_redbee-econotag_board obj_redbee-econotag_board/blink-red.o -o blink-red_redbee-econotag.elf ../src/start.o	 ../src/src.a --start-group obj_redbee-econotag_board/board.a ../lib/libmc1322x.a -lm --end-group
+arm-linux-objcopy --gap-fill=0xff -O binary blink-red_redbee-econotag.elf blink-red_redbee-econotag.bin
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/blink-green.o blink-green.c
+arm-linux-ar cru obj_redbee-econotag_board/board.a
+arm-linux-gcc -T ../mc1322x.lds -nostartfiles -static -Wl,-Map=blink-green_redbee-econotag.map -export-dynamic  \
+	-L ../lib -L ../src -L obj_redbee-econotag_board obj_redbee-econotag_board/blink-green.o -o blink-green_redbee-econotag.elf ../src/start.o	 ../src/src.a --start-group obj_redbee-econotag_board/board.a ../lib/libmc1322x.a -lm --end-group
+arm-linux-objcopy --gap-fill=0xff -O binary blink-green_redbee-econotag.elf blink-green_redbee-econotag.bin
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/blink-blue.o blink-blue.c
+arm-linux-ar cru obj_redbee-econotag_board/board.a
+arm-linux-gcc -T ../mc1322x.lds -nostartfiles -static -Wl,-Map=blink-blue_redbee-econotag.map -export-dynamic  \
+	-L ../lib -L ../src -L obj_redbee-econotag_board obj_redbee-econotag_board/blink-blue.o -o blink-blue_redbee-econotag.elf ../src/start.o	 ../src/src.a --start-group obj_redbee-econotag_board/board.a ../lib/libmc1322x.a -lm --end-group
+arm-linux-objcopy --gap-fill=0xff -O binary blink-blue_redbee-econotag.elf blink-blue_redbee-econotag.bin
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/blink-white.o blink-white.c
+arm-linux-ar cru obj_redbee-econotag_board/board.a
+arm-linux-gcc -T ../mc1322x.lds -nostartfiles -static -Wl,-Map=blink-white_redbee-econotag.map -export-dynamic  \
+	-L ../lib -L ../src -L obj_redbee-econotag_board obj_redbee-econotag_board/blink-white.o -o blink-white_redbee-econotag.elf ../src/start.o	 ../src/src.a --start-group obj_redbee-econotag_board/board.a ../lib/libmc1322x.a -lm --end-group
+arm-linux-objcopy --gap-fill=0xff -O binary blink-white_redbee-econotag.elf blink-white_redbee-econotag.bin
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/blink-allio.o blink-allio.c
+arm-linux-ar cru obj_redbee-econotag_board/board.a
+arm-linux-gcc -T ../mc1322x.lds -nostartfiles -static -Wl,-Map=blink-allio_redbee-econotag.map -export-dynamic  \
+	-L ../lib -L ../src -L obj_redbee-econotag_board obj_redbee-econotag_board/blink-allio.o -o blink-allio_redbee-econotag.elf ../src/start.o	 ../src/src.a --start-group obj_redbee-econotag_board/board.a ../lib/libmc1322x.a -lm --end-group
+arm-linux-objcopy --gap-fill=0xff -O binary blink-allio_redbee-econotag.elf blink-allio_redbee-econotag.bin
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/uart1-loopback.o uart1-loopback.c
+arm-linux-ar cru obj_redbee-econotag_board/board.a
+arm-linux-gcc -T ../mc1322x.lds -nostartfiles -static -Wl,-Map=uart1-loopback_redbee-econotag.map -export-dynamic  \
+	-L ../lib -L ../src -L obj_redbee-econotag_board obj_redbee-econotag_board/uart1-loopback.o -o uart1-loopback_redbee-econotag.elf ../src/start.o	 ../src/src.a --start-group obj_redbee-econotag_board/board.a ../lib/libmc1322x.a -lm --end-group
+arm-linux-objcopy --gap-fill=0xff -O binary uart1-loopback_redbee-econotag.elf uart1-loopback_redbee-econotag.bin
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/tmr.o tmr.c
+arm-linux-ar cru obj_redbee-econotag_board/board.a
+arm-linux-gcc -T ../mc1322x.lds -nostartfiles -static -Wl,-Map=tmr_redbee-econotag.map -export-dynamic  \
+	-L ../lib -L ../src -L obj_redbee-econotag_board obj_redbee-econotag_board/tmr.o -o tmr_redbee-econotag.elf ../src/start.o	 ../src/src.a --start-group obj_redbee-econotag_board/board.a ../lib/libmc1322x.a -lm --end-group
+arm-linux-objcopy --gap-fill=0xff -O binary tmr_redbee-econotag.elf tmr_redbee-econotag.bin
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/tmr-ints.o tmr-ints.c
+cc1: warnings being treated as errors
+tmr-ints.c: In function ‘main’:
+tmr-ints.c:74: error: implicit declaration of function ‘enable_tmr_irq’
+make[1]: *** [obj_redbee-econotag_board/tmr-ints.o] Error 1
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/sleep.o sleep.c
+arm-linux-ar cru obj_redbee-econotag_board/board.a
+arm-linux-gcc -T ../mc1322x.lds -nostartfiles -static -Wl,-Map=sleep_redbee-econotag.map -export-dynamic  \
+	-L ../lib -L ../src -L obj_redbee-econotag_board obj_redbee-econotag_board/sleep.o -o sleep_redbee-econotag.elf ../src/start.o	 ../src/src.a --start-group obj_redbee-econotag_board/board.a ../lib/libmc1322x.a -lm --end-group
+arm-linux-objcopy --gap-fill=0xff -O binary sleep_redbee-econotag.elf sleep_redbee-econotag.bin
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/spi.o spi.c
+arm-linux-ar cru obj_redbee-econotag_board/board.a
+arm-linux-gcc -T ../mc1322x.lds -nostartfiles -static -Wl,-Map=spi_redbee-econotag.map -export-dynamic  \
+	-L ../lib -L ../src -L obj_redbee-econotag_board obj_redbee-econotag_board/spi.o -o spi_redbee-econotag.elf ../src/start.o	 ../src/src.a --start-group obj_redbee-econotag_board/board.a ../lib/libmc1322x.a -lm --end-group
+arm-linux-objcopy --gap-fill=0xff -O binary spi_redbee-econotag.elf spi_redbee-econotag.bin
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/printf.o printf.c
+arm-linux-ar cru obj_redbee-econotag_board/board.a
+arm-linux-gcc -T ../mc1322x.lds -nostartfiles -static -Wl,-Map=printf_redbee-econotag.map -export-dynamic  \
+	-L ../lib -L ../src -L obj_redbee-econotag_board obj_redbee-econotag_board/printf.o -o printf_redbee-econotag.elf ../src/start.o	 ../src/src.a --start-group obj_redbee-econotag_board/board.a ../lib/libmc1322x.a -lm --end-group
+arm-linux-objcopy --gap-fill=0xff -O binary printf_redbee-econotag.elf printf_redbee-econotag.bin
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'
+for target in nvm-read nvm-write romimg flasher rftest-rx rftest-tx per;   do make TARGET_ROM_VARS=1 $target\_redbee-econotag.bin; done
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/nvm-read.o nvm-read.c
+arm-linux-gcc -E -Wa,-gstabs -D__ASSEMBLY__ -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -DUSE_INTS -DUSE_ROM_VECTS -DUSE_ROM_VARS -o ../src/start-romvars.s ../src/start.S
+arm-linux-gcc -Wa,-gstabs -D__ASSEMBLY__ -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -c -o ../src/start-romvars.o ../src/start-romvars.s
+arm-linux-ar cru obj_redbee-econotag_board/board.a
+arm-linux-ar cru ../src/src.a ../src/start-romvars.o
+arm-linux-gcc -T ../mc1322x.lds -nostartfiles -static -Wl,-Map=nvm-read_redbee-econotag.map -export-dynamic  \
+	-L ../lib -L ../src -L obj_redbee-econotag_board obj_redbee-econotag_board/nvm-read.o -o nvm-read_redbee-econotag.elf ../src/start-romvars.o		 ../src/src.a --start-group obj_redbee-econotag_board/board.a ../lib/libmc1322x.a -lm --end-group
+arm-linux-objcopy --gap-fill=0xff -O binary nvm-read_redbee-econotag.elf nvm-read_redbee-econotag.bin
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/nvm-write.o nvm-write.c
+arm-linux-ar cru obj_redbee-econotag_board/board.a
+arm-linux-gcc -T ../mc1322x.lds -nostartfiles -static -Wl,-Map=nvm-write_redbee-econotag.map -export-dynamic  \
+	-L ../lib -L ../src -L obj_redbee-econotag_board obj_redbee-econotag_board/nvm-write.o -o nvm-write_redbee-econotag.elf ../src/start-romvars.o		 ../src/src.a --start-group obj_redbee-econotag_board/board.a ../lib/libmc1322x.a -lm --end-group
+arm-linux-objcopy --gap-fill=0xff -O binary nvm-write_redbee-econotag.elf nvm-write_redbee-econotag.bin
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/romimg.o romimg.c
+arm-linux-ar cru obj_redbee-econotag_board/board.a
+arm-linux-gcc -T ../mc1322x.lds -nostartfiles -static -Wl,-Map=romimg_redbee-econotag.map -export-dynamic  \
+	-L ../lib -L ../src -L obj_redbee-econotag_board obj_redbee-econotag_board/romimg.o -o romimg_redbee-econotag.elf ../src/start-romvars.o		 ../src/src.a --start-group obj_redbee-econotag_board/board.a ../lib/libmc1322x.a -lm --end-group
+arm-linux-objcopy --gap-fill=0xff -O binary romimg_redbee-econotag.elf romimg_redbee-econotag.bin
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/flasher.o flasher.c
+arm-linux-ar cru obj_redbee-econotag_board/board.a
+arm-linux-gcc -T ../mc1322x.lds -nostartfiles -static -Wl,-Map=flasher_redbee-econotag.map -export-dynamic  \
+	-L ../lib -L ../src -L obj_redbee-econotag_board obj_redbee-econotag_board/flasher.o -o flasher_redbee-econotag.elf ../src/start-romvars.o		 ../src/src.a --start-group obj_redbee-econotag_board/board.a ../lib/libmc1322x.a -lm --end-group
+arm-linux-objcopy --gap-fill=0xff -O binary flasher_redbee-econotag.elf flasher_redbee-econotag.bin
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/rftest-rx.o rftest-rx.c
+arm-linux-ar cru obj_redbee-econotag_board/board.a
+arm-linux-gcc -T ../mc1322x.lds -nostartfiles -static -Wl,-Map=rftest-rx_redbee-econotag.map -export-dynamic  \
+	-L ../lib -L ../src -L obj_redbee-econotag_board obj_redbee-econotag_board/rftest-rx.o -o rftest-rx_redbee-econotag.elf ../src/start-romvars.o		 ../src/src.a --start-group obj_redbee-econotag_board/board.a ../lib/libmc1322x.a -lm --end-group
+arm-linux-objcopy --gap-fill=0xff -O binary rftest-rx_redbee-econotag.elf rftest-rx_redbee-econotag.bin
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/rftest-tx.o rftest-tx.c
+arm-linux-ar cru obj_redbee-econotag_board/board.a
+arm-linux-gcc -T ../mc1322x.lds -nostartfiles -static -Wl,-Map=rftest-tx_redbee-econotag.map -export-dynamic  \
+	-L ../lib -L ../src -L obj_redbee-econotag_board obj_redbee-econotag_board/rftest-tx.o -o rftest-tx_redbee-econotag.elf ../src/start-romvars.o		 ../src/src.a --start-group obj_redbee-econotag_board/board.a ../lib/libmc1322x.a -lm --end-group
+arm-linux-objcopy --gap-fill=0xff -O binary rftest-tx_redbee-econotag.elf rftest-tx_redbee-econotag.bin
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'
+make[1]: Entering directory `/home/bc/Desktop/badge/libmc1322x/tests'
+arm-linux-gcc -g -DDEBUG -Os  -fno-strict-aliasing  -fno-common -ffixed-r8 -ffunction-sections -msoft-float -Wcast-align -Wall -D__KERNEL__ -DTEXT_BASE= -fno-builtin -ffreestanding -isystem /home/bc/Desktop/badge/mc1322x-oe/tmp/cross/armv4t/lib/gcc/arm-linux/4.3.2/include -pipe -march=armv4t -mlong-calls -mtune=arm7tdmi-s -DCONFIG_ARM -D__ARM__ -mthumb-interwork  -Wall -Wstrict-prototypes -Wcast-align -Wextra -Werror -Iobj_redbee-econotag_board -I../board -DBOARD=redbee-econotag -I../lib/include -I../src -I. -mthumb -mcallee-super-interworking -MMD -c -o obj_redbee-econotag_board/per.o per.c
+arm-linux-ar cru obj_redbee-econotag_board/board.a
+arm-linux-gcc -T ../mc1322x.lds -nostartfiles -static -Wl,-Map=per_redbee-econotag.map -export-dynamic  \
+	-L ../lib -L ../src -L obj_redbee-econotag_board obj_redbee-econotag_board/per.o -o per_redbee-econotag.elf ../src/start-romvars.o		 ../src/src.a --start-group obj_redbee-econotag_board/board.a ../lib/libmc1322x.a -lm --end-group
+arm-linux-objcopy --gap-fill=0xff -O binary per_redbee-econotag.elf per_redbee-econotag.bin
+make[1]: Leaving directory `/home/bc/Desktop/badge/libmc1322x/tests'

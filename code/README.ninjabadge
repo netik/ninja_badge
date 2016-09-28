@@ -1,0 +1,53 @@
+Hello!
+
+The code in this tarball is the source to the final image flashed to the Ninja Networks
+2010 party badges.  It's in a pretty rough state and will be cleaned up eventually, but I
+wanted to get it out there as soon as possible.
+
+To build everything, first set up an armv4t toolchain.  I used OpenEmbedded GCC.  You can
+find instructions on how to do this here:  http://mc1322x.devl.org/ubuntu.html
+(I hear the CodeSourcery toolchain works as well.)
+
+Then, set up paths properly (nearly everything's in the Makefile) and run:
+
+% make kernel.bin
+
+from this directory.  
+
+
+Main directories:
+
+    - src/: mostly ARM-compiled ISRs and low-level stuff.  Some code incorporated 
+    - kernel/: most of the badge code lives here.  
+    - lib/: a modified/stripped down version of Mariano Alvira's libmc1322x; this is
+      statically linked in with the kernel
+    - secret/: the unique data for each badge, including boss badges 
+    - openocd/: a ready-to-go (for linux/x86_64) openocd build plus the scripts I used 
+    - tests/: a set of test programs; includes source and binaries for flashing
+      internal/external flash (dflash/eflash)
+
+
+Flash layout:
+
+    kernel.bin is flashed to MCU flash, starting at flash address 8 (the first 4 bytes are
+    a magic value and the second 4 bytes are the length to read at boot; see MC1322xRM
+    3.11 for details on the boot process.).  
+
+    A badge's unique ID and other decsriptive information such as item-grant/level-bump
+    nonces are located at 0x18000 in flash.  Choose a secret file from 
+
+    Boss badges (including black badges) were flashed with the table of all nonces.  This
+    goes into the external SPI flash IC; badge ID table starts at EXT_BADGEIDS_ADDR
+    (0x4000), and the item tables follow.  See the procedures in openocd/mcutils.cfg 
+    for details.
+
+
+Flashing/JTAG:
+
+    We used Olimex ARM-USB-OCD and ARM-USB-TINYH programmers to flash the badges.  I've
+    also connected with a bus Pirate, although it's significantly slower than the
+    Olimexes.
+    
+    
+
+
