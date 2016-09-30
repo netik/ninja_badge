@@ -1,0 +1,29 @@
+
+I'm fairly certain this is the display they used: https://www.adafruit.com/product/250
+Graphic ST7565 Positive LCD (128x64) with RGB backlight + extras - ST7565
+
+
+NOTES--
+
+Microcontroller must buffer display - uses 1Kb of RAM. This means you must upgrade to a ATmega328 if you are using an Arduino with a '8 or '168
+For a more detailed tutorial, including how to wire up the display with a 4050, see our writeup at http://www.ladyada.net/learn/lcd/st7565.html
+
+Library;
+
+https://github.com/adafruit/ST7565-LCD
+
+bmp2glcd library makes icons.
+screen is about $17.95/each
+LM6059BCW possibly?
+
+How does the frame buffer work?
+what is this pagemap mess?
+
+
+What the fuck format is this mess in?
+
+http://www.hobbytronics.co.uk/bmp-lcd-converter
+https://blog.adafruit.com/2012/07/10/st7565-designer-a-bitmapfont-designer-for-the-st7565-graphical-lcds/
+
+https://github.com/pinsonn/st7565-designer
+
